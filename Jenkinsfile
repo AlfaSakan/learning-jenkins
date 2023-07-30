@@ -7,6 +7,7 @@ pipeline{
         stage("A"){
             steps{
                 echo "========executing A========"
+                sh "yarn install --frozen-lockfile"
                 sh "node index.js"
                 sh "yarn -v"
             }
