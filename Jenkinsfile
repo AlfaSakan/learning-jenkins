@@ -1,10 +1,13 @@
 pipeline{
     agent any
+    tools {
+        nodejs "node18"
+    }
     stages{
         stage("A"){
             steps{
                 echo "========executing A========"
-                node -v
+                sh "node -v"
             }
             post{
                 always{
