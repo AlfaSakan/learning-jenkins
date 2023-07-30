@@ -4,7 +4,7 @@ pipeline{
         stage("A"){
             steps{
                 echo "========executing A========"
-                node index.js
+                node -v
             }
             post{
                 always{
